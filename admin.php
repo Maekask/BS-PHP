@@ -2,22 +2,20 @@
 <html lang="et">
     <head>
         <title>Admin</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
+            crossorigin="anonymous">
     </head>
 
     <body>
- <div class="container">
+        <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                         <a class="navbar-brand " href="#">Sinunimi.com</a>
@@ -53,7 +51,9 @@
                         </div>
                     </div>
                 </nav>
-<h1>Admin</h1>
+        </div>        
+<div class="container">
+    <h1>Admin</h1>
 <?php
     if (isset($_GET['ok'])) {
         echo '<div class="alert alert-success" role="alert">
@@ -75,13 +75,14 @@
     <label for="hind">Toote hind</label>
     <input type="number" min="0.00" max="100.00" step="0.01" name="hind" required><br>
 
-    <label for="lisapilt"></label>
+    <label for="lisapilt">Lisa pilt</label>
     <input type="file" name="lisapilt"><br>
 
     <input type="hidden" name="page" value="services">
 
     <input class="btn btn-success" type="submit" value="Lisa uus toode">
 </form>
+
 <?php
 if (isset($_POST['nimetus'])) {
 
@@ -128,7 +129,7 @@ if (isset($_POST['nimetus'])) {
                     <p class="card-text">' . $rida[3] . '€</p>
                     <form method="POST">
                         <input type="hidden" name="delete_product" value="' . $rida[0] . '">
-                        <button class="btn btn-danger" type="submit">Delete</button>
+                        <button class="btn btn-danger" type="submit">Kustuta</button>
                     </form>
                     </div>
                 </div>
@@ -156,7 +157,10 @@ if (isset($_POST['nimetus'])) {
         fclose($fp);
 
         header("Location:admin.php?page=admin");
-        exit(); // Ensure that no more output is sent
+        exit();
     }
     ?>
 </div>
+ </div> 
+</body>
+</html>

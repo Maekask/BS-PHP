@@ -14,7 +14,6 @@
     </style>
 </head>
 <body>
-    <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -70,14 +69,14 @@
                             $pildid = array("img/kobe.png", "img/image1.png");
                             $suvapildid = $pildid[array_rand($pildid)];
                         ?>
-                        <img src="<?php echo $suvapildid; ?>" height="300px" alt="Image 1">
+                        <img src="<?php echo $suvapildid; ?>" height="300" alt="Image 1">
                     </div>
                 </div>
             </div>
         </div>
         <h1 class="text-center fs-4 mt-4 mb-5">Parimad pakkumised</h1>
         <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php
             $products = "products.csv";
             $minu_csv = fopen($products, "r");
@@ -103,13 +102,12 @@
             ?>
         </div>
     </div>
-    </div>
     <div class="container-fluid bg-dark">
         <div class="row pt-3 text-center text-light">
             <p>Mart Mäekask</p>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
